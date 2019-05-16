@@ -233,7 +233,7 @@ class FloorplanDataset(Dataset):
         self.random = random
         self.imagePaths = []
         # self.dataFolder = '../data/'
-		self.dataFolder = 'floorplan-recognition-test/pytorch/data/'
+        self.dataFolder = 'floorplan-recognition-test/pytorch/data/'
         with open(self.dataFolder + split + '.txt') as f:
             for line in f:
                 self.imagePaths.append([value.strip() for value in line.split('\t')])
