@@ -33,14 +33,9 @@ def main(options):
     model.train()
 
     if options.restore == 1:
-        print('test')
-        dataset_test = FloorplanDataset(options, split='test', random=False)
-        testOneEpoch(options, model, dataset_test)
-        exit(1)
-
-        #print('restore')
-        #model.load_state_dict(torch.load(options.checkpoint_dir + '/checkpoint.pth'))
-        #pass
+        print('restore')
+        model.load_state_dict(torch.load(options.checkpoint_dir + '/checkpoint.pth'))
+        pass
 
     
     if options.task == 'test':
